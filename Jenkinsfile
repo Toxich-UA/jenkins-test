@@ -11,6 +11,7 @@ pipeline {
                 sh 'mvn -v'
                 sh 'echo %JAVA_HOME%'
                 sh 'java -version'
+                sh 'docker -v'
                 sh 'mvn clean install'
             }
         }
