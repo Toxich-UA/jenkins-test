@@ -8,6 +8,9 @@ pipeline {
     stages {
         stage('Build maven') {
             steps {
+                sh 'mvn -v'
+                sh 'echo %JAVA_HOME%'
+                sh 'java -version'
                 sh 'mvn clean install'
             }
         }
