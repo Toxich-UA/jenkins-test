@@ -20,7 +20,7 @@ pipeline {
             steps {
                 sh 'docker stop toxichua/demo || true && docker rm toxichua/demo || true'
                 sh 'docker build -t toxichua/demo .'
-                sh 'docker run -p 8081:8081 toxichua/demo'
+                sh 'docker run -p 8081:8080 toxichua/demo'
             }
         }
     }
