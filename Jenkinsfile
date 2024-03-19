@@ -18,9 +18,9 @@ pipeline {
         }
         stage('Build docker image') {
             steps {
-                sh 'docker stop toxichua/demo || true && docker rm toxichua/demo || true'
-                sh 'docker build -t toxichua/demo .'
-                sh 'docker run -d -p 8081:8080 --name toxichua/demo toxichua/demo'
+                sh 'docker stop toxichua-demo || true && docker rm toxichua-demo || true'
+                sh 'docker build -t toxichua-demo .'
+                sh 'docker run -d -p 8081:8080 --name toxichua-demo toxichua-demo'
             }
         }
     }
